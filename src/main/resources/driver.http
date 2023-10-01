@@ -10,3 +10,5 @@ Content-Type: application/json
   "nameOfStreet": "asfa",
   "number": 1
 }
+###
+GET http://localhost:8080/api/person/145422544545

@@ -1,6 +1,8 @@
 package database_project_API_prototype.databaseAPI.databaseModel;
 
-public record FitnessCenter(int fitnessCenterID,
+import java.util.Optional;
+
+public record FitnessCenter(Integer fitnessCenterID,
                             String name,
-                            Address address) {
+                            Optional<Address> address) {
 }

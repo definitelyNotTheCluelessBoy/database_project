@@ -4,7 +4,6 @@ import database_project_API_prototype.databaseAPI.databaseModel.Address;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
 
-import java.security.PrivateKey;
 import java.util.ArrayList;
 import java.util.Optional;
 
@@ -13,7 +12,7 @@ public class AddressRepo {
 
     private final ArrayList<Address> listOfAddresses = new ArrayList<Address>();
 
-    public Optional<Address> getAddressWithID(Integer ID) {
+    public Optional<Address> getAddressWithID(Integer ID) {;
         return listOfAddresses.stream().filter(c -> c.addressId().equals(ID)).findAny();
     }
 
@@ -31,5 +30,9 @@ public class AddressRepo {
 
     public void remove(Integer id) {
         listOfAddresses.removeIf(content -> content.addressId().equals(id));
+    }
+
+    public ArrayList<Address> getListOfAddresses() {
+        return listOfAddresses;
     }
 }
