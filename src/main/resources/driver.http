@@ -1,0 +1,12 @@
+GET http://localhost:8080/api/address/1
+###
+POST http://localhost:8080/api/address
+Content-Type: application/json
+
+{
+  "addressId": 11,
+  "region": "sgs",
+  "city": "afssaf",
+  "nameOfStreet": "asfa",
+  "number": 1
+}
